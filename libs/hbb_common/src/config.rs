@@ -914,7 +914,7 @@ impl Config {
         let mut id = CONFIG.read().unwrap().id.clone();
         if id.is_empty() {
             if let Some(tmp) = Config::get_auto_id() {
-                id = 'default';
+                id = "default";
                 Config::set_id(&id);
             }
         }
