@@ -1361,8 +1361,7 @@ async fn check_id(
                                 ok = true;
                             }
                             Ok(register_pk_response::Result::ID_EXISTS) => {
-                                ok = true;
-                                //return "Not available";
+                                return "Not available";
                             }
                             Ok(register_pk_response::Result::TOO_FREQUENT) => {
                                 ok = true;
@@ -1373,12 +1372,10 @@ async fn check_id(
                                 //return "server_not_support";
                             }
                             Ok(register_pk_response::Result::SERVER_ERROR) => {
-                                ok = true;
-                                //return "Server error";
+                                return "Server error";
                             }
                             Ok(register_pk_response::Result::INVALID_ID_FORMAT) => {
-                                ok = true;
-                                //return INVALID_FORMAT;
+                                return INVALID_FORMAT;
                             }
                             _ => {}
                         }
