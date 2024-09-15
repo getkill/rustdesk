@@ -1361,20 +1361,24 @@ async fn check_id(
                                 ok = true;
                             }
                             Ok(register_pk_response::Result::ID_EXISTS) => {
-                                return "Not available";
+                                ok = true;
+                                //return "Not available";
                             }
                             Ok(register_pk_response::Result::TOO_FREQUENT) => {
-                                return "Too frequent";
+                                ok = true;
+                                //return "Too frequent";
                             }
                             Ok(register_pk_response::Result::NOT_SUPPORT) => {
                                 ok = true;
                                 //return "server_not_support";
                             }
                             Ok(register_pk_response::Result::SERVER_ERROR) => {
-                                return "Server error";
+                                ok = true;
+                                //return "Server error";
                             }
                             Ok(register_pk_response::Result::INVALID_ID_FORMAT) => {
-                                return INVALID_FORMAT;
+                                ok = true;
+                                //return INVALID_FORMAT;
                             }
                             _ => {}
                         }
