@@ -8,9 +8,9 @@ import { decompress, mapKey, sleep } from "./common";
 
 const PORT = 2116;
 const HOSTS = [
-  "yuntaihk.imwork.net",
-  "yuntaihk.imwork.net",
-  "yuntaihk.imwork.net",
+  "my.snowsurfer.cn",
+  "my.snowsurfer.cn",
+  "my.snowsurfer.cn",
 ];
 let HOST = localStorage.getItem("rendezvous-server") || HOSTS[0];
 const SCHEMA = "ws://";
